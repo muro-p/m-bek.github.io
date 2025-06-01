@@ -1,0 +1,597 @@
+/* Umumiy uslublar */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Och kulrang fon */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #2196F3; /* Ko'k rang */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #1976D2; /* To'q ko'k */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Kichik ekranlar uchun */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFC107; /* To'q sariq */
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2196F3; /* Ko'k */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 500px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.1rem;
+}
+
+.search-box button {
+    background-color: #FFC107; /* To'q sariq */
+    color: #333;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #FF9800; /* To'q sariqning quyuqroq tushi */
+}
+
+/* Materiallar va Kategoriyalar bo'limlari */
+section {
+    padding: 40px 0;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1976D2;
+    margin-bottom: 30px;
+}
+
+.material-grid, .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.material-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.material-card h4 {
+    color: #2196F3;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.material-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Yashil */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #388E3C; /* To'q yashil */
+    text-decoration: none;
+}
+
+.category-item {
+    background-color: #E3F2FD; /* Och ko'k fon */
+    color: #1976D2;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: #BBDEFB; /* Biroz to'qroq och ko'k */
+    color: #0D47A1; /* To'q ko'k */
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Mobil moslashuvchanlik (Responsive) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .search-box input {
+        width: 75%;
+    }
+
+    .material-grid, .category-grid {
+        grid-template-columns: 1fr; /* Kichik ekranlarda bir ustun */
+    }
+}
+/* Yangi sahifalar uchun umumiy uslublar */
+.page-header {
+    background-color: #E3F2FD; /* Och ko'k */
+    color: #1976D2;
+    text-align: center;
+    padding: 60px 20px 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #1976D2;
+}
+
+.search-box.small {
+    margin-top: 20px;
+}
+
+.search-box.small input {
+    width: 70%; /* Kichikroq qidiruv paneli */
+    max-width: 400px;
+}
+
+.materials-list h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1976D2;
+    margin-bottom: 30px;
+}
+
+/* Pagination (Sahifalash) uslublari */
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #2196F3;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #1976D2;
+    color: white;
+    border-color: #1976D2;
+    font-weight: bold;
+}
+/* Document Detail Page styles */
+.document-detail {
+    background-color: white;
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+    color: #2196F3;
+}
+
+.breadcrumbs span {
+    font-weight: bold;
+    color: #333;
+}
+
+.document-detail h2 {
+    color: #1976D2;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Sarlavhani markazga joylash */
+}
+
+.document-meta {
+    background-color: #f0f8ff; /* Och moviy fon */
+    border-left: 5px solid #2196F3;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.document-meta p {
+    margin: 5px 0;
+    font-size: 1.05rem;
+}
+
+.document-meta strong {
+    color: #1976D2;
+}
+
+.document-content {
+    margin-bottom: 40px;
+}
+
+.document-content h3 {
+    color: #1976D2;
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.document-content p {
+    margin-bottom: 15px;
+    text-align: justify; /* Matnni tekislash */
+}
+
+.document-content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.document-content ul li {
+    margin-bottom: 8px;
+}
+
+.download-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #E8F5E9; /* Juda och yashil */
+    border: 1px solid #C8E6C9;
+    border-radius: 10px;
+}
+
+.main-download-btn {
+    display: inline-flex; /* Iconka va matnni yonma-yon qilish */
+    align-items: center; /* Vertikal o'rtaga joylash */
+    background-color: #4CAF50; /* Yashil */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-download-btn img {
+    margin-right: 10px;
+    width: 24px; /* Iconka o'lchami */
+    height: 24px;
+    filter: invert(100%); /* Iconkani oq qilish */
+}
+
+.main-download-btn:hover {
+    background-color: #388E3C; /* To'q yashil */
+    transform: translateY(-3px); /* Ozgina yuqoriga siljish */
+    text-decoration: none;
+}
+
+.file-format {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Comments Section */
+.comments-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.comments-section h3 {
+    text-align: left;
+    color: #1976D2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.comment {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.comment p {
+    margin: 0 0 5px 0;
+}
+
+.comment span {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.add-comment-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment-btn:hover {
+    background-color: #1976D2;
+}
+
+/* Related Materials (oldingi material-grid uslubidan foydalanadi) */
+.related-materials {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.related-materials h3 {
+    text-align: center;
+    color: #1976D2;
+    margin-bottom: 30px;
+}
+
+/* Telefon uchun moslashuvchanlik */
+@media (max-width: 768px) {
+    .document-detail h2 {
+        font-size: 2rem;
+    }
+
+    .main-download-btn {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    .main-download-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .comments-section, .document-meta {
+        padding: 20px;
+    }
+}
+/* Aloqa sahifasi uslublari */
+.contact-form-section {
+    background-color: white;
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Paddingni hisobga olish */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical; /* Faqat vertikal o'lchamini o'zgartirish */
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #28a745; /* Yashilroq tugma */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.contact-info h3 {
+    color: #1976D2;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #2196F3;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: #1976D2;
+}
+
+/* Mobil moslashuvchanlik */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-info {
+        padding: 20px 0;
+    }
+}
+
+/* Aktiv navigatsiya linki uslubi */
+header nav ul li a.active-nav-link {
+    color: #FFC107; /* To'q sariq */
+    border-bottom: 2px solid #FFC107; /* Pastki chiziq */
+    padding-bottom: 3px;
+}
+
+
+
+  
