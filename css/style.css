@@ -591,6 +591,12 @@ header nav ul li a.active-nav-link {
     border-bottom: 2px solid #FFC107; /* Pastki chiziq */
     padding-bottom: 3px;
 }
+.download-button img {
+    width: 24px; /* Ikonka kengligini belgilaydi */
+    height: 24px; /* Ikonka balandligini belgilaydi */
+    vertical-align: middle; /* Matn bilan bir xil qatorda bo'lishini ta'minlaydi */
+    margin-right: 8px; /* Matndan o'ngda biroz joy qoldiradi */
+}
 
 
 
